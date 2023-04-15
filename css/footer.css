@@ -1,0 +1,27 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  color: var(--dark-bg-text-color);
+  background-color: var(--dark-bg-color);
+}
+
+.footer .logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer-contacts .list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.dark-bg-logo {
+  color: var(--dark-bg-text-color);
+}
+
+.mail,
+.tel {
+  color: var(--dark-bg-link-text-color);
+}
