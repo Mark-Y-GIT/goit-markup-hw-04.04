@@ -7,6 +7,8 @@
   --dark-bg-link-text-color: rgba(255, 255, 255, 0.6);
   --button-color: #f5f4fa;
   --gap: 30px;
+  --icon-color: #afb1b8;
+  --main-font: 'Roboto', sans-serif;
 }
 
 h1,
@@ -25,7 +27,7 @@ img {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--main-font);
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -71,6 +73,12 @@ ul {
   color: var(--accent-color);
 }
 
+.link:hover > .icon,
+.link:focus > .icon,
+.link:active > .icon {
+  fill: var(--accent-color);
+}
+
 .container {
   width: 1200px;
 
@@ -84,7 +92,7 @@ ul {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   border-bottom: 1px solid #ececec;
 }
 
@@ -118,15 +126,14 @@ ul {
 
 .nav-list {
   display: flex;
-}
-
-.nav-list .list-item:not(:last-child) {
-  margin-right: 50px;
+  column-gap: 50px;
 }
 
 .contacts {
   display: flex;
-  justify-content: end;
+  align-items: center;
+
+  margin-left: auto;
 
   font-weight: 500;
   line-height: 1.14;
@@ -135,14 +142,37 @@ ul {
   color: var(--main-text-color);
 }
 
-.contacts .list-item:not(:last-child) {
+.contacts > .list-item:not(:last-child) {
   margin-right: 50px;
+}
+
+.contacts .icon {
+  fill: var(--main-text-color);
+  margin-right: 10px;
+}
+
+.contacts :last-child {
+  display: flex;
+  align-items: center;
 }
 
 .hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--dark-bg-color);
+
+  background-image: linear-gradient(
+      to right,
+      rgba(2, 0, 36, 0.4) 24%,
+      rgba(16, 16, 191, 0.4) 48%,
+      rgba(11, 23, 185, 0.664) 90%
+    ),
+    url(/images/hero-u.jpg);
+
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-repeat: no-repeat;
 }
 
 .hero-section .container {
@@ -200,10 +230,11 @@ ul {
 
 .features .list {
   display: flex;
+  column-gap: var(--gap);
 }
 
-.features .list-item:not(:last-child) {
-  margin-right: 30px;
+.features-list > .list-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
 .feature-titles {
@@ -234,10 +265,7 @@ ul {
 
 .work .list {
   display: flex;
-}
-
-.work .list-item:not(:last-child) {
-  margin-right: 30px;
+  column-gap: 30px;
 }
 
 .third-titles {
@@ -265,6 +293,7 @@ ul {
 
 .team .list {
   display: flex;
+  column-gap: 30px;
 }
 
 .team .list-item {
@@ -280,11 +309,9 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team .list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .job-title {
+  margin-bottom: 15px;
+
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -344,19 +371,94 @@ ul {
 .work-examples-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  /* margin-left: -30px;
-  margin-top: -30px; */
+  column-gap: 30px;
 }
 
 .work-examples-list .list-item {
   /* margin-left: 30px;
   margin-top: 30px; */
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .card-item-container {
   padding: 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+}
+
+.features .list-item::before {
+  display: block;
+  height: 120px;
+  content: '';
+  background-color: var(--button-color);
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.antenna::before {
+  background-image: url(/images/icons/SVG/antenna.svg);
+}
+
+.clock::before {
+  background-image: url(/images/icons/SVG/clock.svg);
+}
+
+.diagram::before {
+  background-image: url(/images/icons/SVG/diagram.svg);
+}
+
+.astronaut::before {
+  background-image: url(/images/icons/SVG/astronaut.svg);
+}
+
+.social-media-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.social-media-list .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+.social-icon-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.social-icon-link:hover {
+  background-color: #2196f3;
+}
+
+.social-icon-link:hover .icon {
+  fill: #ffffff;
+}
+
+.clients-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.clients-link:hover {
+  border-color: var(--accent-color);
 }
