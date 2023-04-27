@@ -38,6 +38,12 @@
   column-gap: 50px;
 }
 
+.nav-list .link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .contacts {
   display: flex;
   align-items: center;
@@ -49,6 +55,11 @@
   letter-spacing: 0.02em;
 
   color: var(--main-text-color);
+}
+
+.contacts .link {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .contacts > .list-item:not(:last-child) {

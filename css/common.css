@@ -1,8 +1,8 @@
 :root {
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  --dark-bg-text-color: #fff;
   --main-text-color: #757575;
+  --dark-bg-text-color: #fff;
   --dark-bg-color: #2f303a;
   --dark-bg-link-text-color: rgba(255, 255, 255, 0.6);
   --button-color: #f5f4fa;
@@ -90,10 +90,8 @@ ul {
 }
 
 .button {
-  width: 128px;
+  min-width: 128px;
   height: 40px;
-
-  font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
