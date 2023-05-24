@@ -25,3 +25,10 @@
 .tel {
   color: var(--dark-bg-link-text-color);
 }
+
+.footer-container {
+  display: flex;
+}
+
+.footer-social-icons {
+}
