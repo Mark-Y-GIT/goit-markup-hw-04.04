@@ -39,9 +39,21 @@
 }
 
 .nav-list .link {
-  display: block;
+  display: inline-block;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.nav-list .link::after {
+  display: none;
+  content: '';
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.current.link::after {
+  display: block;
 }
 
 .contacts {
