@@ -39,9 +39,8 @@
 }
 
 .nav-list .link {
-  display: inline-block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-list .link::after {
@@ -52,8 +51,15 @@
   border-radius: 2px;
 }
 
+.current {
+  position: relative;
+}
+
 .current.link::after {
   display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .contacts {
