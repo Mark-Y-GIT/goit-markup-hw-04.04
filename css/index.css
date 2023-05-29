@@ -1,5 +1,4 @@
 .hero {
-  /* position: relative; */
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--dark-bg-color);
@@ -10,7 +9,7 @@
       rgba(16, 16, 191, 0.4) 48%,
       rgba(11, 23, 185, 0.664) 90%
     ),
-    url(/images/hero-u.jpg);
+    url(/images/hero.jpg);
 
   max-width: 1600px;
   margin-right: auto;
